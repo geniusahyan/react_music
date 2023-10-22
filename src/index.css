@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+}
+.musicbar img{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border: 0.4rem solid white;
+    background-color: #1fd1d1;
+    z-index: 1;
+}
+circle{
+    fill:none;
+    stroke: url(#GradientColor);
+    stroke-width: 3rem;
+}
+.play_pause::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: cyan;
+    z-index: -1;
+}
+.play_pause{
+    z-index: 20;
+    color: orange;
+}
+a{
+    text-decoration: none;
+}
+svg{
+    animation: rotate 3s ease-in-out infinite;
+}
+@keyframes rotate {
+    0%{
+        rotate: 0;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        height: 90vh;
+    }
+    .wrapper{
+        height: 38rem;
+        width: 20rem;
+    }
+    .innerWrapper{
+        height: 37rem;
+        width: 19rem;
+    }
+}
